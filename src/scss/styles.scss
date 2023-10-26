@@ -1,6 +1,89 @@
+@import "_mixins";
+@import "_variables";
+@import "_reset";
+@import "_extend";
+
 body {
-  background: peru;
-  a {
-    color: blue;
+  height: 50vh;
+}
+header {
+  display: flex;
+  height: 4vh;
+  font-size: 31px;
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: 600;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+
+  .section-left {
+    width: 66.66%;
+    height: 100%;
+    a {
+      margin-left: 0.5vw;
+      margin-right: 5vw;
+      text-decoration: none;
+      color: black;
+    }
+    .section-left__menu-about {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 2.5vw;
+        color: #d9dadb;
+      }
+      &:hover {
+        background-color: #d9dadb;
+        span {
+          color: rgb(242, 242, 242);
+        }
+      }
+    }
+  }
+  .section-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 33.34%;
+    padding-left: 0.5vw;
+    position: relative;
+    span {
+      margin-right: 7vw;
+    }
+    .language {
+      position: absolute;
+      right: 0;
+      font-size: 15px;
+      margin-right: 1vw;
+    }
+    &:hover {
+      background-color: #d9dadb;
+    }
+  }
+}
+
+main {
+  padding-top: 4vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 44.5vh);
+  height: 100%;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  span {
+    display: inline-block;
+    margin-top: 0.3vh;
+    margin-left: 0.5vw ;
+
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
